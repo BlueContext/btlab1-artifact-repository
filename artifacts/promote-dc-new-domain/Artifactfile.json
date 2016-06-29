@@ -1,17 +1,17 @@
 {
   "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2015-01-01/dtlArtifacts.json",
-  "title": "",
-  "description": "Configures for package management and DSC",
+  "title": "Promote DC in New Domain",
+  "description": "Promotes a server as the first domain controller in a new lab domain",
   "iconUri": "",
-  "targetOsType": "",
+  "targetOsType": "Windows",
   "parameters": {
-    "<parameterName>": {
-      "type": "",
-      "displayName": "",
-      "description": ""
+    "DomainName": {
+      "type": "string",
+      "displayName": "Domain Name",
+      "description": "fully qualified DNS name for the new domain"
     }
   },
   "runCommand": {
-    "commandToExecute": ""
+    "commandToExecute": "[concat('powershell.exe -File promote-dc-new-domain.ps1','-domainName', parameters('DomainName'))]"
   }
 }

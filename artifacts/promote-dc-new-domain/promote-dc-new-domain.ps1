@@ -1,8 +1,13 @@
 [CmdletBinding()]
 
 Param(
-    [Parameter(Mandatory=$true)]$accessKey
+    [Parameter(Mandatory=$true)]$domainName,
+    [Parameter(Mandatory=$true)]$userName,
+    [Parameter(Mandatory=$true)]$password
 )
+
+$targetNode = $env:COMPUTERNAME
+$outputPath = "C:\DSC"
 
 Import-Module PackageManagement
 Import-Module PowerShellGet
@@ -36,3 +41,4 @@ $cd = @{
          }
     )
 }
+
