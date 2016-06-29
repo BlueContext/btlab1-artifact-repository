@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2015-01-01/dtlArtifacts.json",
+  "title": "Install WMF 5.0 for WS 2012 R2",
+  "description": "Installs the Windows Management Framework 5.0 which provides PowerShell 5.0 and package management",
+  "iconUri": "",
+  "targetOsType": "Windows",
+  "parameters": {
+    "StorageAccessKey": {
+      "type": "string",
+      "displayName": "Storage Access Key",
+      "description": "Key to Azure Storage account with the relevant installer files"
+    }
+  },
+  "runCommand": {
+    "commandToExecute": "[concat('powershell.exe -File install-wmf-5.ps1','-accessKey', parameters('StorageAccessKey'))]"
+  }
+}
