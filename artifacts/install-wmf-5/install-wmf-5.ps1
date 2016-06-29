@@ -16,12 +16,12 @@ $fileName = "Win8.1AndW2K12R2-KB3134758-x64.msu"
 
 $commandText = "cmdkey /add:" + $storageName + "." + $storageRootAddress + " /user:" + $storageName + " /pass:" + $accessKey
 $command = [scriptblock]::create($commandText)
-Invoke-Command -ScriptBlock $command -Wait
+Invoke-Command -ScriptBlock $command 
 
 $path = "\\" + $storageName + "." + $storageRootAddress + "\" + $shareName 
 $commandText = "net use m: " + $path
 $command = [scriptblock]::Create($commandText)
-Invoke-Command -ScriptBlock $command -Wait
+Invoke-Command -ScriptBlock $command 
 
 $check = Test-Path -Path M:\$subFolder
 
@@ -30,10 +30,7 @@ if($check -eq $true)
     cd M:\$subFolder
     $commandText = "wusa " + $fileName + " /quiet /norestart | out-null"
     $command = [scriptblock]::create($commandText)
-    Invoke-Command -ScriptBlock $command -Wait
-    
+    Invoke-Command -ScriptBlock $command   
 }
-
-
 
 Set-ExecutionPolicy RemoteSigned -Force
