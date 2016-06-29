@@ -9,9 +9,19 @@
       "type": "string",
       "displayName": "Domain Name",
       "description": "fully qualified DNS name for the new domain"
+    },
+    "UserName": {
+      "type": "string",
+      "displayName": "User Name",
+      "description": "user name for the admin user"
+    },
+    "Password": {
+      "type": "string",
+      "displayName": "Password",
+      "description": "Password for the domain admin user and safe mode"
     }
   },
   "runCommand": {
-    "commandToExecute": "[concat('powershell.exe -File promote-dc-new-domain.ps1','-domainName', parameters('DomainName'))]"
+    "commandToExecute": "[concat('powershell.exe -File promote-dc-new-domain.ps1',' -domainName ', parameters('DomainName'), ' -userName ', parameters('UserName), ' -password ', parameters('Password'))]"
   }
 }

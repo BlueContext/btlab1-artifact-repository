@@ -33,7 +33,7 @@ $cd = @{
         @{
             NodeName = $targetNode            
             Role = "Primary DC"             
-            DomainName = ".lab"             
+            DomainName = $domainName             
             RetryCount = 20              
             RetryIntervalSec = 30            
             PsDscAllowPlainTextPassword = $true
