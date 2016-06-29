@@ -18,11 +18,11 @@ $shareName = "installers"
 $subFolder = "wmf-5.0"
 $fileName = "Win8.1AndW2K12R2-KB3134758-x64.msu"
 
-$shortPath = $storageName + "." + $storageRootAddress
-cmdkey /add:$shortPath /user:$storageName /pass:$accessKey
+#$shortPath = $storageName + "." + $storageRootAddress
+#cmdkey /add:$shortPath /user:$storageName /pass:$accessKey
 
 $path = "\\" + $storageName + "." + $storageRootAddress + "\" + $shareName 
-net use m: $path
+net use m: $path /u:$storageName $accessKey
 
 
 $check = Test-Path -Path M:\$subFolder
