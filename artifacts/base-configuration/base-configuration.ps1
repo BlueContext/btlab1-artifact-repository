@@ -1,7 +1,7 @@
 [CmdletBinding()]
 
 Param(
-    [Parameter(Mandatory=$false)]$pointless = " "
+    [Parameter(Mandatory=$true)]$pointless
 )
 
 Import-Module PackageManagement
