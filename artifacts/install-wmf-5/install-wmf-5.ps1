@@ -28,7 +28,7 @@ $check = Test-Path -Path M:\$subFolder
 if($check -eq $true)
 {
     cd M:\$subFolder
-    $commandText = "wusa " + $fileName + " /quiet /norestart | out-null"
+    $commandText = "wusa " + $fileName + " /quiet /forcerestart | out-null"
     $command = [scriptblock]::create($commandText)
     Invoke-Command -ScriptBlock $command   
 }

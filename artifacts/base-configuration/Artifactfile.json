@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2015-01-01/dtlArtifacts.json",
   "title": "",
-  "description": "Configures for package management and DSC",
+  "description": "",
   "iconUri": "",
   "targetOsType": "",
   "parameters": {
