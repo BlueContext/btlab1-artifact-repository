@@ -12,6 +12,6 @@
     }
   },
   "runCommand": {
-    "commandToExecute": "[concat('powershell.exe -File base-configuration.ps1 ', ' -pointless ', parameters('Pointless')]"
+    "commandToExecute": "[concat('powershell.exe -File base-configuration.ps1 ', ' -pointless ', parameters('Pointless'))]"
   }
 }
