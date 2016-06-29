@@ -5,8 +5,13 @@
   "iconUri": "",
   "targetOsType": "Windows",
   "parameters": {
+    "Pointless": {
+      "type": "string",
+      "displayName": "Placeholder",
+      "description": "Enter a single space"
+    }
   },
   "runCommand": {
-    "commandToExecute": "[concat('powershell.exe -File base-configuration.ps1']"
+    "commandToExecute": "[concat('powershell.exe -File base-configuration.ps1 ', ' -pointless ', parameters('Pointless')]"
   }
 }
