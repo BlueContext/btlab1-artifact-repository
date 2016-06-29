@@ -28,9 +28,7 @@ $check = Test-Path -Path M:\$subFolder
 if($check -eq $true)
 {
     cd M:\$subFolder
-    $commandText = "wusa " + $fileName + " /quiet /forcerestart | out-null"
-    $command = [scriptblock]::create($commandText)
-    Invoke-Command -ScriptBlock $command   
+    wusa Win8.1AndW2K12R2-KB3134758-x64.msu /quiet /forcerestart | out-null
 }
 
 Set-ExecutionPolicy RemoteSigned -Force
