@@ -22,6 +22,7 @@
     }
   },
   "runCommand": {
-    "commandToExecute": "[concat('powershell.exe -File promote-dc-new-domain.ps1',' -domainName ', parameters('DomainName'), ' -userName ', parameters('UserName), ' -password ', parameters('Password'))]"
+    "commandToExecute": "[concat('powershell.exe -File promote-dc-new-domain.ps1', ' -domainName ', parameters('DomainName'), ' -userName ', parameters('UserName), ' -password ', parameters('Password'))]"
   }
 }
+
