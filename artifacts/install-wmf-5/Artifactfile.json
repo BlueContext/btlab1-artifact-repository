@@ -12,6 +12,6 @@
     }
   },
   "runCommand": {
-    "commandToExecute": "[concat('powershell.exe -File install-wmf-5.ps1 -accessKey', parameters('StorageAccessKey'))]"
+    "commandToExecute": "[concat('powershell.exe -File install-wmf-5.ps1 -accessKey ', parameters('StorageAccessKey'))]"
   }
 }

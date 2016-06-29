@@ -42,3 +42,9 @@ $cd = @{
     )
 }
 
+. .\ADDCConfiguration.ps1
+ADDCConfiguration -targetNode $targetNode -domainCred $cred -ConfigurationData $cd -OutputPath $outputPath
+
+Start-Sleep -s 60
+Start-DscConfiguration -Path "C:\DSC\" -ComputerName $targetNode -Wait
+
