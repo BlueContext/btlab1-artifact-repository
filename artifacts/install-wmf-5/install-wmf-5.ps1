@@ -18,16 +18,12 @@ $shareName = "installers"
 $subFolder = "wmf-5.0"
 $fileName = "Win8.1AndW2K12R2-KB3134758-x64.msu"
 
-$commandText = "cmdkey /add:" + $storageName + "." + $storageRootAddress + " /user:" + $storageName + " /pass:" + $accessKey
-$logString += $commandText
-$command = [scriptblock]::create($commandText)
-Invoke-Command -ScriptBlock $command 
+$shortPath = $storageName + "." + $storageRootAddress
+cmdkey /add:$shortPath /user:$storageName /pass:$accessKey
 
 $path = "\\" + $storageName + "." + $storageRootAddress + "\" + $shareName 
-$commandText = "net use m: " + $path
-$logString += $commandText
-$command = [scriptblock]::Create($commandText)
-Invoke-Command -ScriptBlock $command 
+net use m: $path
+
 
 $check = Test-Path -Path M:\$subFolder
 
