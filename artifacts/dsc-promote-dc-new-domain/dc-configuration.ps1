@@ -56,7 +56,7 @@ configuration ADDCConfiguration
         xDnsServerForwarder SetForwarders
         {
             IsSingleInstance = 'Yes'
-            IPAddresses = '10.71.26.84','10.71.26.85'
+            IPAddresses = '8.8.8.8','8.8.4.4'
             DependsOn = "[xDnsServerForwarder]RemoveAllForwarders"
         }
 	}
