@@ -1,8 +1,7 @@
 [CmdletBinding()]
 param
 (
-    [Mandatory($true)]
-    [string]$Pointless
+    [Parameter(Mandatory = $true)]$Pointless
 )
 
 Set-ExecutionPolicy Unrestricted -Force
