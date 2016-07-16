@@ -12,10 +12,10 @@ md C:\ArtifactLogs
 $logString = @()
 $logString += "AccessKey value is $accessKey"
 
-$storageName = "labfilesstorage"
+$storageName = "labfileserver"
 $storageRootAddress = "file.core.windows.net"
 $shareName = "installers"
-$subFolder = "wmf-5.0"
+$subFolder = "wmf-5"
 $fileName = "Win8.1AndW2K12R2-KB3134758-x64.msu"
 
 #$shortPath = $storageName + "." + $storageRootAddress
