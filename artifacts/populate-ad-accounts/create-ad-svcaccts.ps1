@@ -1,6 +1,6 @@
 param
 (
-    [string]$pointless = " "
+    [string]$Source
 )
 
 # LOAD ASSEMBLIES AND MODULES

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2015-01-01/dtlArtifacts.json",
+  "title": "Populate accounts and groups in Active Directory",
+  "description": "Populates a set of accounts and groups in Active Directory, including BizTalk and SQL service accounts and groups",
+  "iconUri": "",
+  "targetOsType": "Windows",
+  "parameters": {
+    "Pointless": {
+      "type": "string",
+      "displayName": "Placeholder",
+      "description": "Just put something..."
+    }
+  },
+  "runCommand": {
+    "commandToExecute": "[concat('powershell.exe -File populate-ad-accounts.ps1',  ' -Pointless ', parameters('Pointless'))]"
+  }
+}
