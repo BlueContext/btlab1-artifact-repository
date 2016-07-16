@@ -30,7 +30,7 @@ configuration MemberServerConfiguration
 		{
 			Name = $targetNode
 			DomainName =$domainName
-			Credential = $Credential
+			Credential = $domainCred
 		}
 	}
 }
