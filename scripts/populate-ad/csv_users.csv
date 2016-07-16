@@ -1,0 +1,4 @@
+Implement,GivenName,LastName,Description,Mail,Password,PasswordNeverExpires,Enabled,DomainAdmin
+Yes,Kevin,Baker,Kevin Baker,kevin.baker@contoso.com,Par0xet1n3,TRUE,TRUE,TRUE
+Yes,Alexander,Wu,Alexander Wu,alexander.wu@contoso.com,Par0xet1n3,TRUE,TRUE,FALSE
+Yes,Serina,Zagen,Serina Zagen,serina.zagen@contoso.com,Par0xet1n3,TRUE,TRUE,FALSE
