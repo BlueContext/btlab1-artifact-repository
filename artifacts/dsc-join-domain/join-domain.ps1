@@ -46,5 +46,5 @@ $cd = @{
 MemberServerConfiguration -targetNode $targetNode -domainCred $cred -ConfigurationData $cd -OutputPath $outputPath
 
 Start-Sleep -s 60
-Start-DscConfiguration -Path "C:\DSC\" -ComputerName $targetNode -Wait
+Start-DscConfiguration -Path "C:\DSC\" -ComputerName $targetNode -Wait -Force
 
