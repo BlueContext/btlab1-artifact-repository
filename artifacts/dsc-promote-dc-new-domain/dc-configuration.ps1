@@ -46,18 +46,18 @@ configuration ADDCConfiguration
             DependsOn = "[File]ADFiles"            
         }
 
-        xDnsServerForwarder RemoveAllForwarders
-        {
-            IsSingleInstance = 'Yes'
-            IPAddresses = @()
-            DependsOn = "[xADDomain]FirstDS"
-        }
+        #xDnsServerForwarder RemoveAllForwarders
+        #{
+        #    IsSingleInstance = 'Yes'
+        #    IPAddresses = @()
+        #    DependsOn = "[xADDomain]FirstDS"
+        #}
 
         xDnsServerForwarder SetForwarders
         {
             IsSingleInstance = 'Yes'
             IPAddresses = '8.8.8.8','8.8.4.4'
-            DependsOn = "[xDnsServerForwarder]RemoveAllForwarders"
+       #     DependsOn = "[xDnsServerForwarder]RemoveAllForwarders"
         }
 	}
 }
