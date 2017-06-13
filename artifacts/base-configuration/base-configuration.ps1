@@ -16,4 +16,6 @@ Install-Package xNetworking -Force
 Install-Package xComputerManagement -Force
 Install-Package xTimeZone -Force
 
+Set-DnsClientServerAddress -InterfaceIndex 5 -ServerAddresses ("10.56.10.6","10.71.15.100")
+
 md c:\DSC
