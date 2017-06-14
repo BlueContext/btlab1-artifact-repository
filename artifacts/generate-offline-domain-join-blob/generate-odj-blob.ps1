@@ -13,6 +13,6 @@ $check = Test-Path -Path $outputPath
 
 if($check -eq $true)
 {
-    $fullPath = $outputPath + $outputFileName
+    $fullPath = $outputPath + "\" + $outputFileName
     djoin.exe /provision /domain $domainName /machine $machineName /saveFile $fullPath
 }
