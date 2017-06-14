@@ -10,10 +10,11 @@
       "displayName": "First DNS Server",
       "description": "IP Address (Required)"
     },
-      "DnsServerTwo": {      
-        "type": "string",      
-        "displayName": "Second DNS Server",      
-        "description": "IP Address (Optional)"    }
+      "DnsServerTwo": {
+        "type": "string",
+        "displayName": "Second DNS Server",
+        "description": "IP Address (Optional)"
+      }
   },
   "runCommand": {
     "commandToExecute": "[concat('powershell.exe -File base-setup.ps1', ' -dnsServer1 ', parameters('DnsServerOne'), ' -dnsServer2 ', parameters('DnsServerTwo'))]"
