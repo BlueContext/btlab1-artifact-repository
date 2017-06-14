@@ -22,6 +22,6 @@
     }
   },
   "runCommand": {
-    "commandToExecute": "[concat('powershell.exe -File generate-odj-blob.ps1', ' -domainName ', parameters('DomainName'), ' -machineName', parameters('MachineName'), ' -outputPath ', parameters('OutputPath'))]"
+    "commandToExecute": "[concat('powershell.exe -File generate-odj-blob.ps1', ' -domainName ', parameters('DomainName'), ' -machineName ', parameters('MachineName'), ' -outputPath ', parameters('OutputPath'))]"
   }
 }
