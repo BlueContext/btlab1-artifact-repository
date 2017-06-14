@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2015-01-01/dtlArtifacts.json",
+  "title": "Nano - join existing AD domain",
+  "description": "Joins a Nano server to an existing AD domain using Offline Domain Join",
+  "iconUri": "",
+  "targetOsType": "Windows",
+  "parameters": {
+    "DomainName": {
+      "type": "string",
+      "displayName": "Domain Name",
+      "description": "FQDN of the domain to be joined"
+    },
+    "MachineName": {
+      "type": "string",
+      "displayName": "Machine Name",
+      "description": "Host name of the machine to be joined to the domain"
+    },
+    "MachineIP": {
+      "type": "string",
+      "displayName": "Machine IP",
+      "description": "IP address of the machine to be joined to the domain"
+    },
+    "OutputPath": {
+      "type": "string",
+      "displayName": "Output Path",
+      "description": "full path to the directory where the new ODJ blob should be created"
+    }
+  },
+  "runCommand": {
+    "commandToExecute": "[concat('powershell.exe -File generate-odj-blob.ps1', ' -domainName ', parameters('DomainName'), ' -machineName', parameters('MachineName'), ' -machineIp ', parameters('MachineIP'), ' -outputPath ', parameters('OutputPath')]"
+  }
+}

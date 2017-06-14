@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2015-01-01/dtlArtifacts.json",
+  "title": "Nano - join existing AD domain",
+  "description": "Joins a Nano server to an existing AD domain using Offline Domain Join",
+  "iconUri": "",
+  "targetOsType": "Windows",
+  "parameters": {
+    "BlobPath": {
+      "type": "string",
+      "displayName": "Blob Path",
+      "description": "full path including file name for the ODJ blob file"
+    }
+  },
+  "runCommand": {
+    "commandToExecute": "[concat('powershell.exe -File offline-domain-join.ps1', ' -blobPath ', parameters('BlobPath'))]"
+  }
+}
