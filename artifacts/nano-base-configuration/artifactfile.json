@@ -5,13 +5,17 @@
   "iconUri": "",
   "targetOsType": "Windows",
   "parameters": {
-    "PlaceHolder": {
+    "DnsServerOne": {
       "type": "string",
-      "displayName": "Placeholder",
-      "description": "Required but not used, just type a character here"
-    }
+      "displayName": "First DNS Server",
+      "description": "IP Address (Required)"
+    },
+      "DnsServerTwo": {      
+        "type": "string",      
+        "displayName": "Second DNS Server",      
+        "description": "IP Address (Optional)"    }
   },
   "runCommand": {
-    "commandToExecute": "[concat('powershell.exe -File base-setup.ps1', ' -placeholder ', parameters('PlaceHolder'))]"
+    "commandToExecute": "[concat('powershell.exe -File base-setup.ps1', ' -dnsServer1 ', parameters('DnsServerOne'), ' -dnsServer2 ', parameters('DnsServerTwo'))]"
   }
 }
