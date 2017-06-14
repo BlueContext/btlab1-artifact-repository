@@ -12,6 +12,6 @@
     }
   },
   "runCommand": {
-    "commandToExecute": "[concat('powershell.exe -File base-setup.ps1', ' -placeholder ', parameters('PlaceHolder')]"
+    "commandToExecute": "[concat('powershell.exe -File base-setup.ps1', ' -placeholder ', parameters('PlaceHolder'))]"
   }
 }
