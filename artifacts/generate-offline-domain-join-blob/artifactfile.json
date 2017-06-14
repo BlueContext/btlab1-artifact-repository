@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2015-01-01/dtlArtifacts.json",
-  "title": "Nano - join existing AD domain",
-  "description": "Joins a Nano server to an existing AD domain using Offline Domain Join",
+  "title": "Offline Domain Join",
+  "description": "Run against a DC to generate an ODJ blob",
   "iconUri": "",
   "targetOsType": "Windows",
   "parameters": {
@@ -14,11 +14,6 @@
       "type": "string",
       "displayName": "Machine Name",
       "description": "Host name of the machine to be joined to the domain"
-    },
-    "MachineIP": {
-      "type": "string",
-      "displayName": "Machine IP",
-      "description": "IP address of the machine to be joined to the domain"
     },
     "OutputPath": {
       "type": "string",
