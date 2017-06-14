@@ -11,7 +11,8 @@ Set-NetFirewallProfile -Name Domain -Enabled False
 Set-NetFirewallProfile -Name Public -Enabled False
 Set-NetFirewallProfile -Name Private -Enabled False
 
-Save-Module -Path "$env:ProgramFiles\WindowsPowerShell\Modules" -Name NanoServerPackage -MinimumVersion 1.0.0.0
+Install-PackageProvider NuGet -Force
+Save-Module -Path "$env:ProgramFiles\WindowsPowerShell\Modules" -Name NanoServerPackage -MinimumVersion 1.0.0.0 -Force
 Import-PackageProvider NanoServerPackage
 Install-NanoServerPackage Microsoft-NanoServer-DSC-Package
 
