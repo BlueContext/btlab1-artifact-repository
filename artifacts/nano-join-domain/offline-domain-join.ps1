@@ -10,7 +10,3 @@ if($check -eq $true)
 {
     djoin.exe /requestodj /loadfile $blobPath /windowspath $env:SystemRoot /localos
 }
-
-Start-sleep -s 30
-
-Restart-Computer -Force
