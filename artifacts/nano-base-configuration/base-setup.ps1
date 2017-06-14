@@ -1,16 +1,17 @@
 [CmdletBinding()]
 
 Param(
-    [Parameter(Mandatory=$true)]$placeholder
+    [Parameter(Mandatory=$true)]$dnsServer1,
+    [Parameter(Mandatory=$false)]$dnsServer2
 )
 
-# if($dnsServer2 = $null){
-#     Set-DnsClientServerAddress -InterfaceIndex 2 -ServerAddresses ("$dnsServer1")
-# }
-# else
-# {
-#     Set-DnsClientServerAddress -InterfaceIndex 2 -ServerAddresses ("$dnsServer1","$dnsServer2")
-# }
+if($dnsServer2 = $null){
+     Set-DnsClientServerAddress -InterfaceIndex 2 -ServerAddresses ("$dnsServer1")
+ }
+ else
+ {
+     Set-DnsClientServerAddress -InterfaceIndex 2 -ServerAddresses ("$dnsServer1","$dnsServer2")
+ }
 
 Set-NetFirewallProfile -Name Domain -Enabled False
 #Set-NetFirewallProfile -Name Public -Enabled False
