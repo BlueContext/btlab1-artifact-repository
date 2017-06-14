@@ -3,7 +3,7 @@
 Param(
     [Parameter(Mandatory=$true)]$domainName,
     [Parameter(Mandatory=$true)]$machineName,
-    [Parameter(Mandatory=$true)]$machineIp,
+#    [Parameter(Mandatory=$true)]$machineIp,
     [Parameter(Mandatory=$true)]$outputPath
 )
 
