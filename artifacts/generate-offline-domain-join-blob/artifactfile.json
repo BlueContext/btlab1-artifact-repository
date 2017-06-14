@@ -1,4 +1,4 @@
-){
+{
   "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2015-01-01/dtlArtifacts.json",
   "title": "Offline Domain Join",
   "description": "Run against a DC to generate an ODJ blob",
