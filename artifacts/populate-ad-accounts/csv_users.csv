@@ -1,8 +1,0 @@
-Implement,GivenName,LastName,Description,Mail,Password,PasswordNeverExpires,Enabled,DomainAdmin
-Yes,Alexander,Wu,Alexander Wu,alexander.wu@intra.lab,Welcome@1234,TRUE,TRUE,FALSE
-Yes,Serina,Zagen,Serina Zagen,serina.zagen@intra.lab,Welcome@1234,TRUE,TRUE,FALSE
-Yes,Komali,Uppugandla,Komali Uppugandla,komali.uppugandla@intra.lab,Welcome@1234,TRUE,TRUE,TRUE
-Yes,Jamiel,Rico,Jamiel Rico,jamiel.rico@intra.lab,Welcome@1234,TRUE,TRUE,TRUE
-Yes,John,Denman,John Denman,john.denman@intra.lab,Welcome@1234,TRUE,TRUE,TRUE
-Yes,Bruce,Charron,Bruce Charron,bruce.charron@intra.lab,Welcome@1234,TRUE,TRUE,TRUE
-Yes,Kevin,Flanagan,Kevin Flanagan,kevin.flanagan@intra.lab,Welcome@1234,TRUE,TRUE,TRUE
