@@ -1,1 +1,0 @@
-net use M \\labfilesstorage.file.core.windows.net\installers /u:labfilesstorage [storage account access key]
